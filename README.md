@@ -1,1 +1,1 @@
-# Practicing and learing basic things of C++
+# Practicing and learning basic things of C++
