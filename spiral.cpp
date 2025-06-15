@@ -22,24 +22,35 @@ int main() {
     cout << "Spiral order of the matrix is: " << endl;
     int row_start=0, row_end=n-1, col_start=0, col_end=m-1;
     //for row start
-    for(int col=col_start; col <= col_end; col++) {
-        cout << arr[row_start][col] << " ";
-    }
-    //for column end
-    for(int row=row_start+1; row <= row_end; row++) {
-        cout << arr[row][col_end] << " ";
-    }
-    //for row end
-    if(row_start < row_end) {
-        for(int col=col_end-1; col >= col_start; col--) {
-            cout << arr[row_end][col] << " ";
+    while(row_start <= row_end && col_start <= col_end) {
+        // Print the first row
+        for(int i = col_start; i <= col_end; i++) {
+            cout << arr[row_start][i] << " ";
         }
-    }
-    //for column start  
-    if(col_start < col_end) {
-        for(int row=row_end-1; row > row_start; row--) {
-            cout << arr[row][col_start] << " ";
+        row_start++;
+
+        // Print the last column
+        for(int i = row_start; i <= row_end; i++) {
+            cout << arr[i][col_end] << " ";
         }
+        col_end--;
+
+        // Print the last row if there are still rows left
+        if(row_start <= row_end) {
+            for(int i = col_end; i >= col_start; i--) {
+                cout << arr[row_end][i] << " ";
+            }
+            row_end--;
+        }
+
+        // Print the first column if there are still columns left
+        if(col_start <= col_end) {
+            for(int i = row_end; i >= row_start; i--) {
+                cout << arr[i][col_start] << " ";
+            }
+            col_start++;
+        }
+
     }
 
     return 0;
