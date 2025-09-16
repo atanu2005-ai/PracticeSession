@@ -1,1 +1,1 @@
-# Practicing and learning basic things of C++
+# Practicing and learning basic things of C++ for DSA and other things.
