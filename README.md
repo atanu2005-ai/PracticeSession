@@ -1,5 +1,5 @@
 # What I do here?
-I learn & practice differnt topics by solving differnt problems for a better understanding of logic.
+I learn & practice differnt topics by solving differnt problems for a better understanding of logic in C++.
 
 ## Topics covered:
 1. If-else statement
